@@ -1,1 +1,154 @@
-/* Your CSS goes here  */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff4c7;
+  color: #4b2e05;
+}
+
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #ffcc33, #ff8c1a);
+  border-bottom: 6px dashed white;
+  position: relative;
+  overflow: hidden;
+}
+
+.logo {
+  font-size: 60px;
+  margin: 0;
+  animation: bounce 1.5s infinite;
+  text-shadow: 3px 3px white;
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 600px;
+  margin: 15px auto;
+}
+
+.paw-bg {
+  position: absolute;
+  font-size: 35px;
+  opacity: 0.25;
+  width: 100%;
+  animation: floatPaws 6s infinite linear;
+}
+
+.form-box {
+  background: white;
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 25px;
+  box-shadow: 0 6px 0 #ff9f1c;
+  border: 3px solid #ffb703;
+}
+
+.form-box h2 {
+  text-align: center;
+}
+
+input,
+select {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 2px solid #ffb703;
+  border-radius: 12px;
+  font-size: 15px;
+}
+
+button {
+  background: #ff8c1a;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 5px;
+}
+
+button:hover {
+  background: #fb5607;
+  transform: scale(1.05);
+}
+
+.filters {
+  text-align: center;
+  margin: 20px;
+}
+
+.pet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+  padding: 25px;
+}
+
+.pet-card {
+  background: white;
+  border-radius: 20px;
+  padding: 15px;
+  box-shadow: 0 5px 0 #ffb703;
+  border: 3px solid #ffd166;
+}
+
+.pet-card img {
+  width: 100%;
+  max-height: 320px;
+  object-fit: contain;
+  border-radius: 15px;
+  background: #fff7df;
+}
+
+.tag {
+  background: #ffe8a3;
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 15px;
+  font-size: 13px;
+}
+
+.comment-box {
+  margin-top: 12px;
+}
+
+.comment {
+  background: #fff4c7;
+  padding: 8px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes floatPaws {
+  from {
+    transform: translateX(-100px);
+  }
+
+  to {
+    transform: translateX(100px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .logo {
+    font-size: 42px;
+  }
+
+  .hero {
+    padding: 35px 15px;
+  }
+}

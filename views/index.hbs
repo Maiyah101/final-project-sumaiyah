@@ -1,2 +1,76 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<section class="hero">
+  <div class="paw-bg">🐾 🐾 🐾 🐾 🐾</div>
+
+  <h1 class="logo">Zoomie Zone</h1>
+
+  <p>
+    An anonymous public archive for silly pet pictures.
+    Post a pet, like your favorites, and leave comments.
+  </p>
+</section>
+
+<section class="form-box">
+  <h2>Add a Pet Post</h2>
+
+  <form id="postForm">
+
+    <input
+      type="file"
+      id="petImage"
+      accept="image/*"
+      required
+    >
+
+    <input
+      type="text"
+      id="caption"
+      placeholder="Write a caption"
+      required
+    >
+
+    <select id="tag" required>
+      <option value="cat">Cat</option>
+
+      <option value="dog">Dog</option>
+
+      <option value="other pets">
+        Other Pets
+      </option>
+
+      <option value="silly pics">
+        Silly Pics
+      </option>
+    </select>
+
+    <button type="submit">
+      Post Pet
+    </button>
+
+  </form>
+</section>
+
+<section class="filters">
+
+  <button onclick="filterPosts('all')">
+    All
+  </button>
+
+  <button onclick="filterPosts('cat')">
+    Cats
+  </button>
+
+  <button onclick="filterPosts('dog')">
+    Dogs
+  </button>
+
+  <button onclick="filterPosts('other pets')">
+    Other Pets
+  </button>
+
+  <button onclick="filterPosts('silly pics')">
+    Silly Pics
+  </button>
+
+</section>
+
+<section id="posts" class="pet-grid"></section>
